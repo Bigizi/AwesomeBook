@@ -1,31 +1,5 @@
-
-// class Book {
-//     constructor () {
-//         this.books = [];
-//     }
-
-//    addBook(newBook) {
-//     this.books.push(newBook);
-//     localStorage.setItem("AllBooks"), JSON.stringify(this.books)
-//     }
-
-//    removeBook() {
-
-//    } 
-// }
-
-// const container = document.getElementById("form");
-// const author = document.getElementById("author");
-// const title = document.getElementById("title");
-
-// function addBook() {
-
-// }
-
-// function removeBook() {
-
-// }
-
+/* eslint-disable max-classes-per-file */
+/* eslint-disable no-use-before-define */
 const listOfbooks = document.querySelector('.book-list');
 const head = document.querySelector('.title-container');
 class Book {
@@ -111,11 +85,6 @@ window.onload = () => {
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
 
-let showAlert = () => {
-  const div = document.createElement('div');
-  div.className = 'error';
-  div.appendChild(document.createTextNode('fields are required'));
-  const newB = document.querySelector('.form-title');
-  newB.appendChild(div);
-  setTimeout(() => document.querySelector('.error').remove(), 3000);
-};
+
+
+
