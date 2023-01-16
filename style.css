@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  padding-left: 40%;
+  padding-top: 10px;
+}
+
+.book-item {
+  display: flex;
+  gap: 15px;
+  margin-top: 5px;
+}
