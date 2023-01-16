@@ -1,7 +1,7 @@
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-use-before-define */
 const listOfbooks = document.querySelector('.book-list');
-const head = document.querySelector('.title-container');
+
 class Book {
   constructor(title, author) {
     this.title = title;
@@ -27,7 +27,6 @@ class StoreBook {
   removeBook = (bookid) => {
     const rmvbook = document.getElementById(bookid);
     rmvbook.remove();
-    removeSuccess();
     this.BookData = this.BookData.filter((x) => x.bookid !== bookid);
     localStorage.setItem('AllBooks', JSON.stringify(this.BookData));
   }
@@ -62,18 +61,11 @@ let DisplayBooks = (index) => {
   listOfbooks.appendChild(displaybook);
 };
 
-const title = document.querySelector('.title');
-const author = document.querySelector('.author');
 // Add Button
 const addnewBook = document.querySelector('.add-btn');
 addnewBook.addEventListener('click', () => {
-  if (title.value === '' || author.value === '') {
-    showAlert();
-  } else {
-    const item = getformInput();
-    savebook.addBook(item);
-    success();
-  }
+  const item = getformInput();
+  savebook.addBook(item);
 });
 
 window.onload = () => {
@@ -84,7 +76,3 @@ window.onload = () => {
   }
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
-
-
-
-
