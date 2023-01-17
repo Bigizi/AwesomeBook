@@ -5,12 +5,59 @@
 }
 
 .content {
-  padding-left: 40%;
+  padding-left: 35%;
   padding-top: 10px;
 }
 
 .book-item {
   display: flex;
-  gap: 15px;
   margin-top: 5px;
+  padding: 10px;
+  width: 40%;
+  border: 1px solid black;
+  justify-content: space-between;
+}
+
+
+.author {
+  height: 40px;
+  border: 1px solid black;
+  width: 260px;
+}
+
+.title {
+  height: 40px;
+  border: 1px solid black;
+  width: 260px;
+}
+
+.title-bar {
+  text-align: center;
+}
+
+.add-btn {
+  background-color: green;
+  width: 60px;
+  border-radius: 8px;
+  border: none;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+  float: right;
+}
+
+.remove {
+  background-color: rgba(255, 0, 0, 0.726);
+  width: 60px;
+  border-radius: 8px;
+  border: none;
+  padding: 3px;
+  color: white;
+  font-weight: bold;
+}
+
+.add-form {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
 }

@@ -55,6 +55,7 @@ let DisplayBooks = (index) => {
   displaybook.setAttribute('id', index.bookid);
   displaybook.innerHTML = `<p>${index.title} by ${index.author}</p>`;
   const removeBook = document.createElement('button');
+  removeBook.classList.add('remove')
   removeBook.innerHTML = 'Remove';
   removeBook.addEventListener('click', () => savebook.removeBook(index.bookid));
   displaybook.appendChild(removeBook);
