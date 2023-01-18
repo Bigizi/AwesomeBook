@@ -78,6 +78,25 @@ window.onload = () => {
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
 
+// Get Date function
+setInterval(() => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.toLocaleString('en-US', { month: 'long' });
+  const day = date.getDate();
+  const hour = date.getHours();
+  let minute = date.getMinutes();
+  let sec = date.getSeconds();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  if (sec < 10) {
+    sec = `0${sec}`;
+  }
+  const fullTime = `${[month, day, year].join(' ')}, ${[hour, minute, sec].join(':')}`;
+  document.getElementById('date').textContent = fullTime;
+}, 1000);
+
 // a complete website with navigation
 const list = document.getElementById('list');
 const addNew = document.getElementById('add-new');
