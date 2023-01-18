@@ -41,11 +41,11 @@ const getformInput = () => {
   return insertbook;
 };
 
-// Display teh list of books on the web page
+// Display the list of books on the web page
 let DisplayBooks = (index) => {
   let bgcolor = '';
   if (savebook.BookData.indexOf(index) % 2 !== 0) {
-    bgcolor = 'white';
+    bgcolor = 'dark';
   } else {
     bgcolor = 'light';
   }
@@ -55,6 +55,7 @@ let DisplayBooks = (index) => {
   displaybook.setAttribute('id', index.bookid);
   displaybook.innerHTML = `<p>${index.title} by ${index.author}</p>`;
   const removeBook = document.createElement('button');
+  removeBook.classList.add('remove');
   removeBook.innerHTML = 'Remove';
   removeBook.addEventListener('click', () => savebook.removeBook(index.bookid));
   displaybook.appendChild(removeBook);
