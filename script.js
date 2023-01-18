@@ -77,3 +77,57 @@ window.onload = () => {
   }
   savebook.BookData.forEach((item) => DisplayBooks(item));
 };
+
+// Get Date function
+setInterval(() => {
+  const date = new Date();
+  const year = date.getFullYear();
+  const month = date.toLocaleString('en-US', { month: 'long' });
+  const day = date.getDate();
+  const hour = date.getHours();
+  let minute = date.getMinutes();
+  let sec = date.getSeconds();
+  if (minute < 10) {
+    minute = `0${minute}`;
+  }
+  if (sec < 10) {
+    sec = `0${sec}`;
+  }
+  const fullTime = `${[month, day, year].join(' ')}, ${[hour, minute, sec].join(':')}`;
+  document.getElementById('date').textContent = fullTime;
+}, 1000);
+
+// a complete website with navigation
+const list = document.getElementById('list');
+const addNew = document.getElementById('add-new');
+const contact = document.getElementById('contact');
+const listBook = document.querySelector('.list-container');
+const addNewSect = document.querySelector('.new-book-container');
+const contactSect = document.getElementById('contact-sect');
+
+list.addEventListener('click', () => {
+  addNewSect.classList.add('non-display');
+  listBook.classList.remove('non-display');
+  contactSect.classList.add('non-display');
+  list.classList.add('active');
+  addNew.classList.remove('active');
+  contact.classList.remove('active');
+});
+
+addNew.addEventListener('click', () => {
+  addNewSect.classList.remove('non-display');
+  listBook.classList.add('non-display');
+  contactSect.classList.add('non-display');
+  list.classList.remove('active');
+  addNew.classList.add('active');
+  contact.classList.remove('active');
+});
+
+contact.addEventListener('click', () => {
+  addNewSect.classList.add('non-display');
+  listBook.classList.add('non-display');
+  contactSect.classList.remove('non-display');
+  list.classList.remove('active');
+  contact.classList.add('active');
+  addNew.classList.remove('active');
+});

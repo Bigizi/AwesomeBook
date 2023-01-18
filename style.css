@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 
+/* Global Style */
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +9,77 @@
 
 body {
   font-family: "Lato", sans-serif;
+  color: #000;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+.grid {
+  display: grid;
+}
+
+.btn {
+  border: none;
+  background: none;
+}
+
+.proper-width {
+  width: 700px;
+}
+
+.flex-direc-column {
+  flex-direction: column;
+}
+
+/* End Global Style */
+
+/* Start Nav bar */
+nav {
+  background: #503c50;
+  color: #fff;
+  border-bottom: 2px solid #804444;
+}
+
+.links li a {
+  color: #fff;
+}
+
+.links li {
+  padding: 15px;
+}
+
+.date {
+  align-self: end;
+  margin-top: -35px;
+  padding-right: 55px;
+}
+
+.active {
+  color: red;
 }
 
 .content {
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -97,4 +166,41 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: end;
+}
+
+.contact {
+  padding: 50px;
+}
+
+.contact-title {
+  padding: 20px;
+}
+
+.contact-description {
+  padding: 30px 10px;
+}
+
+.contact-info li {
+  padding: 5px;
+}
+
+.footer {
+  background: #503c50;
+  color: #fff;
+  border-bottom: 2px solid #804444;
+  font-size: 16px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+/* Display Classes */
+.non-display {
+  display: none;
+}
+
+.links li .active {
+  color: hsl(14deg 100% 88%);
 }
